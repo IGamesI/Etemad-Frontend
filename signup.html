@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="global.css">
+    <title>Etemad</title>
+</head>
+
+<body>
+    <div class="page-div">
+        <div class="container-div">
+            <img src="/assets/images/Etemad_Logo.png" width="150px" class="etemad-logo" />
+            <form class="form-container" onclick="return false;">
+                <label for="fname">Email or Username</label>
+                <input type="email" id="fname" name="fname" required minlength="4">
+
+                <label for="password">Password</label>
+                <div class="password-input-group">
+                    <input class="form-control" type="password" id="password" name="password" required minlength="4">
+                    <i class="far fa-eye" id="password-eye"></i>
+                </div>
+
+                <label for="repeat-password">Repeat Password</label>
+                <div class="password-input-group">
+                    <input class="form-control" type="password" id="repeat-password" name="repeat-password" required
+                        minlength="4">
+                    <i class="far fa-eye" id="password-repeat-eye"></i>
+                </div>
+
+                <!-- Add a span element with ripple class -->
+                <button class="login-button" type="submit">
+                    <span class="ripple"></span>
+                    <p>LOGIN TO ACCOUNT</p>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+<script src="/js/passwordEyeHandler.js"></script>
+<script src="/js/buttonRipple.js"></script>
+<script> </script>
+
+</html>
