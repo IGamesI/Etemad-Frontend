@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-mode">
 
 <head>
     <meta charset="UTF-8">
@@ -18,15 +18,51 @@
     <div class="page-div">
         <div class="container-div">
             <img src="/assets/images/Etemad_Logo.png" width="150px" class="etemad-logo" />
-            <form class="form-container" onclick="return false;">
+            <div class="tab-button">
+                <button id="signup-btn" onclick="showSignup()">
+                    <p>Sign up</p>
+                </button>
+                <button id="login-btn" onclick="showLogin()" class="active">
+                    <p>Sign in</p>
+                </button>
+            </div>
+            <form id="login-form" class="form-container">
                 <label for="fname">Email or Username</label>
                 <input type="email" id="fname" name="fname" required minlength="4">
+                <p class="error-text active" id="login-username-error">Please fill out this field</p>
 
                 <label for="password">Password</label>
                 <div class="password-input-group">
                     <input class="form-control" type="password" id="password" name="password" required minlength="4">
                     <i class="far fa-eye" id="password-eye"></i>
                 </div>
+                <p class="error-text active" id="login-password-error">Please fill out this field</p>
+
+                <!-- Add a span element with ripple class -->
+                <button class="login-button" type="submit">
+                    <span class="ripple"></span>
+                    <p>LOGIN TO ACCOUNT</p>
+                </button>
+            </form>
+            <form id="signup-form" class="form-container" style="display: none;">
+                <label for="fname">Email or Username</label>
+                <input type="email" id="fname" name="fname" required minlength="4">
+                <p class="error-text active" id="signup-username-error">Please fill out this field</p>
+
+                <label for="password">Password</label>
+                <div class="password-input-group">
+                    <input class="form-control" type="password" id="password" name="password" required minlength="4">
+                    <i class="far fa-eye" id="password-eye"></i>
+                </div>
+                <p class="error-text active" id="signup-password-error">Please fill out this field</p>
+
+                <label for="repeat-password">Repeat Password</label>
+                <div class="password-input-group">
+                    <input class="form-control" type="password" id="repeat-password" name="repeat-password" required
+                        minlength="4">
+                    <i class="far fa-eye" id="password-repeat-eye"></i>
+                </div>
+                <p class="error-text active" id="signup-repeat-password-error">Please fill out this field</p>
 
                 <!-- Add a span element with ripple class -->
                 <button class="login-button" type="submit">
@@ -35,12 +71,25 @@
                 </button>
             </form>
         </div>
+        <p id="dark-credit" class="background-text active">
+            <a
+                href="https://www.freepik.com/free-vector/earth-view-night-from-alien-planet-neon-space_5603526.htm#query=space%20illustration&position=0&from_view=search&track=ais">
+                Image by vectorpouch</a> on Freepik
+        </p>
+        <p id="light-credit" class="background-text">
+            <a
+                href="https://www.freepik.com/free-vector/alien-planet-landscape-cosmic-background-deserted-coastline-with-mountains-view-glowing-cleft-stars-shining-spheres-space-extraterrestrial-pc-game-backdrop-cartoon-vector-illustration_20700727.htm#query=space%20ilustration&position=15&from_view=search&track=ais">Image
+                by upklyak</a> on Freepik
+        </p>
     </div>
+    <i class="icon fas fa-moon" onclick="toggleMode()"></i>
 </body>
 
 
 <script src="/js/passwordEyeHandler.js"></script>
 <script src="/js/buttonRipple.js"></script>
+<script src="/js/tab.js"></script>
+<script src="/js/modeToggle.js"></script>
 <script> </script>
 
 </html>

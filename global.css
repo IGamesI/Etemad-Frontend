@@ -1,9 +1,27 @@
-:root {
+.dark-mode {
   --background: rgba(56, 57, 111, 0.7);
   --secondry-background: #1f1e4f;
   --text-color: #fff;
+  --text-color-button: #fff;
+  --link-color: #3492eb;
   --secondry-text-color: #ababab;
+
   --primary-color: #6054ff;
+  --error-color: #eb4034;
+
+  --radius-value: 10px;
+}
+
+.light-mode {
+  --background: rgba(255, 255, 255, 0.7);
+  --secondry-background: #b4b3de;
+  --text-color: #000;
+  --text-color-button: #fff;
+  --link-color: #3492eb;
+  --secondry-text-color: #4b4b4b;
+
+  --primary-color: #5271ff;
+  --error-color: #eb4034;
 
   --radius-value: 10px;
 }
@@ -23,6 +41,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: 0.2s;
+}
+
+.light-mode body {
+  background-image: url("/assets/images/background_light.jpg");
 }
 
 p,
@@ -32,6 +56,37 @@ label {
   font-weight: 500;
 
   margin: 0px;
+}
+
+.background-text {
+  color: var(--text-color-button);
+  margin-top: 10px;
+  text-shadow: 2px 2px 2px #120805;
+  display: none;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.background-text.active {
+  display: block;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.background-text a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: 700;
 }
 
 label {
@@ -95,7 +150,6 @@ input {
 
   padding-left: 15px;
   margin-top: 5px;
-  margin-bottom: 20px;
 
   box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2);
 }
@@ -140,6 +194,10 @@ input {
   overflow: hidden;
 }
 
+.login-button p {
+  color: var(--text-color-button);
+}
+
 /* .login-button:hover {
   background-color: var(--secondry-background);
 } */
@@ -167,4 +225,63 @@ span.ripple {
   .container-div {
     min-width: 200px;
   }
+}
+
+.tab-button {
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--secondry-background);
+  border-radius: var(--radius-value);
+
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.tab-button button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  color: var(--text-color);
+  border-radius: var(--radius-value);
+  flex: 1;
+  transition: 0.2s;
+}
+
+.tab-button button.active {
+  background-color: var(--background);
+  color: white;
+  transition: 0.2s;
+}
+
+#signup-form,
+#login-form {
+  width: 300px;
+  margin: auto;
+  transition: 0.2s;
+}
+
+.error-text {
+  color: rgba(0, 0, 0, 0);
+
+  margin-top: 7.5px;
+  margin-bottom: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.error-text.active {
+  color: var(--error-color);
+}
+
+.icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--text-color-button);
 }
