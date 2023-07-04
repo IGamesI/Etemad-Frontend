@@ -355,3 +355,7 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked {
   background-color: var(--primary-color);
 }
+
+.secondry-text {
+  color: var(--secondry-text-color);
+}

@@ -22,4 +22,6 @@ function createRipple(event) {
 
 // Add an event listener to the button
 const button = document.getElementsByClassName("login-button")[0];
+const secondryButton = document.getElementsByClassName("secondry-button")[0];
 button.addEventListener("click", createRipple);
+secondryButton.addEventListener("click", createRipple);

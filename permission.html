@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="permissionPage.css">
+    <link rel="stylesheet" href="global.css">
+
+    <title>Etemad</title>
+</head>
+
+<body>
+    <div class="page-div">
+        <div class="container-div">
+            <img src="/assets/images/Etemad_Logo.png" width="150px" class="etemad-logo" />
+
+            <h1>AI Hub</h1>
+            <p> is requesting your permission
+            </p>
+
+            <form class="permission-box">
+                <div class="permission-container required">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked>
+                        <label for="vehicle1" class="checkbox-label">Your username </label>
+                        <p class="secondry-text">(required)</p>
+                    </div>
+                </div>
+                <div class="permission-container required">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked>
+                        <label for="vehicle1" class="checkbox-label">User Profile</label>
+                        <p class="secondry-text">(required)</p>
+                    </div>
+                    <p class="secondry-text">Your user profile information (first name, last name, etc.)</p>
+                </div>
+                <div class="permission-container">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked>
+                        <label for="vehicle1" class="checkbox-label">Your email address </label>
+                    </div>
+                </div>
+
+            </form>
+
+            <div class="buttons-container">
+                <button class="login-button" type="submit">
+                    <span class="ripple"></span>
+                    <p>AGREE</p>
+                </button>
+                <button class="login-button secondry-button" type="submit">
+                    <span class="ripple"></span>
+                    <p>DISAGREE</p>
+                </button>
+            </div>
+        </div>
+        <p id="dark-credit" class="background-text active">
+            <a
+                href="https://www.freepik.com/free-vector/earth-view-night-from-alien-planet-neon-space_5603526.htm#query=space%20illustration&position=0&from_view=search&track=ais">
+                Image by vectorpouch</a> on Freepik
+        </p>
+        <p id="light-credit" class="background-text">
+            <a
+                href="https://www.freepik.com/free-vector/alien-planet-landscape-cosmic-background-deserted-coastline-with-mountains-view-glowing-cleft-stars-shining-spheres-space-extraterrestrial-pc-game-backdrop-cartoon-vector-illustration_20700727.htm#query=space%20ilustration&position=15&from_view=search&track=ais">Image
+                by upklyak</a> on Freepik
+        </p>
+    </div>
+    <i class="icon fas fa-moon" onclick="toggleMode()"></i>
+</body>
+
+
+<script src="/js/passwordEyeHandler.js"></script>
+<script src="/js/buttonRipple.js"></script>
+<script src="/js/tab.js"></script>
+<script src="/js/modeToggle.js"></script>
+<script> </script>
+
+</html>
